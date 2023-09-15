@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import os
-from .settings_local import *
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,7 +22,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 ######
-SECRET_KEY = 'django-insecure-j0qgve9%!sfdv#a@l*8-bz(5a%zahv9qa9lw(=drnonrz805^i'
+from django.core.management.utils import get_random_secret_key
+SECRET_KEY = get_random_secret_key() 
 ######
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -135,3 +135,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # corsの設定で、すべてのURLからのリクエストを許可する
 CORS_ORIGIN_ALLOW_ALL = True
+
+try:
+    from .local_settings import *
+except:
+    pass
