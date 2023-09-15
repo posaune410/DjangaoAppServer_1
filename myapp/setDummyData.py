@@ -13,7 +13,7 @@ class setDummyData:
         "体調不良", "子供の意志", "保護者の体調不良", "法事", "お出かけ"
     ]
     def __init__(self):
-        Attendance.objects.all().delete()
+        # Attendance.objects.all().delete()
         children = Child.objects.all()
         attendance = Attendance(
             child=children[0], 

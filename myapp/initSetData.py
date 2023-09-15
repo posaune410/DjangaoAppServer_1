@@ -8,6 +8,6 @@ import json
 from .initChildren import initChildren
 from .setDummyData import setDummyData
 
-# initChildren()
+initChildren()
 
-# setDummyData()
+setDummyData()
