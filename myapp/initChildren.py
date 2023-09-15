@@ -39,7 +39,7 @@ class initChildren:
     ]
 
     def __init__(self):
-        Child.objects.all().delete()
+        # Child.objects.all().delete()
         i = 0
         for child_name in self.child_names:
             i += 1
