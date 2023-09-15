@@ -29,10 +29,11 @@ SECRET_KEY = get_random_secret_key()
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
+######
 ALLOWED_HOSTS = [
     'posaune410.pythonanywhere.com'
 ]
-
+######
 
 # Application definition
 
@@ -136,7 +137,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # corsの設定で、すべてのURLからのリクエストを許可する
 CORS_ORIGIN_ALLOW_ALL = True
 
+
+######
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
 try:
     from .local_settings import *
 except:
     pass
+######
