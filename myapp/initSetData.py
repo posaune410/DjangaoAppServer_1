@@ -3,7 +3,7 @@ from django.http import HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.utils import timezone
 from django.db.models import OuterRef, Subquery
-from .models import Attendance, Parent, Child
+# from .models import Attendance, Parent, Child
 import json
 from .initChildren import initChildren
 from .setDummyData import setDummyData
