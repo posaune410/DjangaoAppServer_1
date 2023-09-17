@@ -31,6 +31,7 @@ DEBUG = False
 
 ######
 ALLOWED_HOSTS = [
+    'localhost',
     'posaune410.pythonanywhere.com'
 ]
 ######
